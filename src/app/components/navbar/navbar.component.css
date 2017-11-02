@@ -1,0 +1,22 @@
+.mat-toolbar-row{
+    height: auto;
+}
+.mat-toolbar-layout .mat-toolbar-row{
+	height: auto !important;
+}
+.mat-toolbar .mat-toolbar-row {  
+    height: auto !important;
+}
+.navbar-button{
+	float:left;
+	background-color:transparent;
+}
+.mat-toolbar.mat-primary{  
+    height: auto !important;
+}
+.navbar-absolute{
+	position:relative;
+}
+.toggle-btn{
+	float:left;
+}

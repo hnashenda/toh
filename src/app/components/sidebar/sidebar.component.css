@@ -1,0 +1,235 @@
+
+.sidenav {   
+    width: 250px;	
+    position: fixed;    
+    top: 0;
+    left: 0;
+	height:100%;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+/*@media (max-width:990px){
+	.sidenav {   
+		width: 250px;
+		left: -550px;	
+	}
+}*/
+.scroll-box {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+.scroll-box::-webkit-scrollbar {
+  width: 0.5em; 
+}
+.scroll-box::-webkit-scrollbar,
+.scroll-box::-webkit-scrollbar-thumb {
+  overflow:visible;
+  border-radius: 4px;
+}
+.scroll-box::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,.2); 
+  background: white;
+}
+.cover-bar {
+  position: absolute;
+  height: 100%;  
+  top: 0;
+  right: 0;
+  width: .5em;
+  -webkit-transition: all .5s;
+  opacity: 1;
+}
+/* MAGIC HAPPENS HERE */
+.sidenav:hover .cover-bar {
+   opacity: 0;
+   z-index:-9999;
+  -webkit-transition: all .5s;
+}
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #5b4421;
+    display: block;
+    transition: 0.3s;
+}
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+.sidenav .list-group-item {
+    border-radius: 0;
+    background-color: transparent;
+    /*color: #5b4421;*/
+    border-left: 0;
+    border-right: 0;
+    border-color: transparent;
+    white-space: nowrap;
+}
+
+/* highlight active menu */
+.sidenav .list-group-item:not(.collapsed) {
+   /* background-color: #222;*/
+}
+
+/* closed state */
+.sidenav .list-group .list-group-item[aria-expanded="false"]::after {
+  content: " \f0d7";
+  font-family: FontAwesome;
+  display: inline;
+  text-align: right;
+  padding-left: 5px;
+}
+.sidenav .list-group .list-group-item .collapsed {
+   background-color: red;
+}
+
+
+/* open state */
+.sidenav .list-group-item[aria-expanded="false"]::after {
+  content: "\f142";
+  font-family: FontAwesome;
+  display: inline;
+  text-align: right;
+  padding-left: 5px;
+  float:right;
+}
+
+.sidenav .list-group-item[aria-expanded="true"]::after {
+  content: "\f141";
+  font-family: FontAwesome;
+  display: inline;
+  text-align: right;
+  padding-left: 5px;
+  float:right;
+}
+
+
+.sidenav .list-group .list-group-item[aria-expanded="true"]::after {
+  content: " \f0da";
+  font-family: FontAwesome;
+  display: inline;
+  text-align: right;
+  padding-left: 5px;
+}
+
+/* level 1*/
+.sidenav .list-group .collapse .list-group-item  {
+  padding-left: 20px;
+}
+
+/* level 2*/
+.sidenav .list-group .collapse > .collapse .list-group-item {
+  padding-left: 30px;
+}
+
+/* level 3*/
+.sidenav .list-group .collapse > .collapse > .collapse .list-group-item {
+  padding-left: 40px;
+}
+
+@media (max-width:48em) {
+    /* overlay sub levels on small screens */
+    .sidenav .list-group .collapse.in, .sidenav .list-group .collapsing {
+        position: absolute;
+        z-index: 1;
+        width: 190px;
+    }
+    .sidenav .list-group > .list-group-item {
+        text-align: center;
+        padding: .75rem .5rem;
+    }
+    /* hide caret icons of top level when collapsed */
+.sidenav .list-group > .list-group-item[aria-expanded="true"]::after,
+    .sidenav .list-group > .list-group-item[aria-expanded="false"]::after {
+        display:none;
+    }
+}
+
+/* change transition animation to width when entire sidebar is toggled */
+.sidenav.collapse {
+  -webkit-transition-timing-function: ease;
+       -o-transition-timing-function: ease;
+          transition-timing-function: ease;
+  -webkit-transition-duration: .2s;
+       -o-transition-duration: .2s;
+          transition-duration: .2s;
+}
+
+.sidenav.collapsing {
+  opacity: 0.8;
+  width: 0;
+  -webkit-transition-timing-function: ease-in;
+       -o-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+  -webkit-transition-property: width;
+       -o-transition-property: width;
+          transition-property: width;
+
+}
+.sidenav li, .sidenav.collapse[_ngcontent-c1]{
+	list-style-type:none;
+}
+.sidenav .panel {	
+	background-color:#333;
+}
+.sidenav .user {
+	position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid #ded0ba;
+    border-bottom: 1px solid #ded0ba;	
+}
+.sidenav .user .photo, .bootstrap-navbar .user .photo {
+    width: 34px;
+    height: 34px;
+    overflow: hidden;
+    border-radius: 50%;
+    float: left;
+    margin-right: 11px;
+    margin-left: 23px;
+    z-index: 5;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+.sidenav .list-group-item[aria-expanded="true"] .transparent{
+	background-color:transparent;	
+	border:none;
+}
+.sidenav[_ngcontent-c1] .list-group[_ngcontent-c1] .transparent[aria-expanded="true"][_ngcontent-c1] {
+    background-color:transparent;	
+	border:none;
+}
+.sidenav .transparent{
+	background-color:transparent;	
+	border:none;
+}
+.sidenav .user .photo img, .bootstrap-navbar .user .photo img {
+    width: 100%;
+}
+.sidenav .user a, .bootstrap-navbar .user a {
+    color: #FFFFFF;
+    /*padding: 8px 14px;*/
+    display: block;
+    white-space: nowrap;
+}
+.mat-toolbar-row{
+	height:auto;
+}
+.mat-toolbar.mat-primary{  
+    height: auto !important;
+}
+.app-navbar{
+	width:100%;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}

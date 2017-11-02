@@ -1,0 +1,32 @@
+<!--div class="wrapper"-->
+<div class="settings">
+	<app-mysettings></app-mysettings>
+</div>
+<div class="container-fluid">
+
+    <div class="row">
+		<!--div class="sidebar" data-color='red' data-image=""-->
+	
+			<app-sidebar></app-sidebar>
+			<div class="sidebar-background" style="background-image: url(../assets/img/sidebar-4.jpg)"></div>
+		<!--/div-->
+	   <main class="main" id="main">  	
+				
+			<app-navbar class="app-navbar"></app-navbar>
+			<div id="overlay">	
+				<router-outlet></router-outlet>
+				<!--async-chart></async-chart>
+				
+				<dynamic-chart></dynamic-chart-->
+				<div *ngIf="isMaps('maps')">
+					<app-footer></app-footer>
+				</div> 
+			</div>		
+		</main>
+		
+	</div>
+ </div>
+ 
+
+<!--/div-->
+

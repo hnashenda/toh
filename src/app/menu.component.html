@@ -1,0 +1,74 @@
+  	  
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3 col-xs-1 p-l-0 p-r-0 collapse in" id="sidebar">
+            <div class="list-group panel">
+              	
+				<li routerLinkActive="active">		  
+			   
+					<div class="user">
+						<md-divider></md-divider>
+						<div class="photo">
+							<img src="../assets/img/default-avatar.png">							
+						</div>
+						<a data-parent="#sidebar"  href="#menu_profile" class="list-group-item collapsed transparent" data-toggle="collapse"  aria-expanded="false">
+						   
+						   <span class="hidden-sm-down"> hubert Nashenda</span> 
+					    </a>
+						<div class="collapse" id="menu_profile">							
+							<a routerLink="/user-profile" class="list-group-item" data-parent="#menu_profile">My Profile</a>
+							<a routerLink="/user-profile" class="list-group-item" data-parent="#menu_profile">Edit Profile</a>
+							<a routerLink="/user-profile" class="list-group-item" data-parent="#menu_profile">Settings</a>
+						</div>
+						<md-divider></md-divider>
+					</div>	
+					
+			   </li>
+				
+			   <li routerLinkActive="active" *ngFor="let menuItem of menuItems; let i = index;">				  
+			   
+					<div *ngIf="menuItem.children; else non_menu">
+						<a data-parent="#sidebar"  href="#menu{{i}}" class="list-group-item collapsed" data-toggle="collapse"  aria-expanded="false">
+						   <!--i class="fa fa-dashboard"></i-->
+					   
+						    <i class="material-icons">{{menuItem['data'].menu.icon}}</i>
+						   <span class="hidden-sm-down"> {{menuItem['data'].menu.title}}</span> 
+					    </a>
+						<div class="collapse" id="menu{{i}}">
+							<a *ngFor="let submenuItem of menuItem['children']" [routerLink]="[submenuItem.path]" class="list-group-item" data-parent="#menu">{{submenuItem['data'].menu.title}}</a>		
+							
+							<!--a href="#" class="list-group-item" data-parent="#menu1">Subitem 2</a>
+							<a href="#" class="list-group-item" data-parent="#menu1">Subitem 3</a-->
+						</div>
+					
+					</div>
+					
+					<ng-template #non_menu>
+
+						<a data-parent="#sidebar"  [routerLink]="[menuItem.path]" class="list-group-item" >
+						   <i class="material-icons">{{menuItem['data'].menu.icon}}</i>
+						   <span class="hidden-sm-down"> {{menuItem['data'].menu.title}}</span> 
+						</a>
+												
+					</ng-template>					
+			   
+			   </li>
+			  
+			  
+            </div>
+        </div>
+        <main class="col-md-9 main">
+			<md-toolbar color="primary">				
+				<app-navbar class="app-navbar"></app-navbar>
+			</md-toolbar>
+            <hr>
+				
+			<router-outlet></router-outlet>
+                      
+        </main>
+    </div>
+</div>
+	  
+   
+	
+    

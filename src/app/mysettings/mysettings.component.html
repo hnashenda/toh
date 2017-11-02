@@ -1,0 +1,27 @@
+
+
+<button md-raised-button color="accent" (click)="openTemplate()">
+  <i class="material-icons">&#xE8B8;</i>
+</button>
+
+
+<div class="settings-overlay">
+<ng-template let-data let-dialogRef="dialogRef">
+  
+
+	<div id="mySettings">
+		<span style="font-size:30px;cursor:pointer" (click)="cappuccino()"><i class="material-icons cappuccino">&#xE836;</i></span>
+		<span style="font-size:30px;cursor:pointer" (click)="black()"><i class="material-icons black">&#xE836;</i></span>
+		<span style="font-size:30px;cursor:pointer" (click)="grey()"><i class="material-icons grey">&#xE836;</i></span>
+		<span style="font-size:30px;cursor:pointer" (click)="white()"><i class="material-icons white">&#xE836;</i> </span>
+		<!--button (click)="black()" class="black">black</button>
+		<button (click)="grey()" class="grey">grey</button>
+		<button (click)="white()" class="white">white</button-->
+	</div>	 
+
+  
+  <!--button type="button" (click)="dialogRef.close(lastCloseResult = howMuch.value)">Close dialog</button-->
+  <button type="button" (click)="dialogRef.close()">Close dialog</button>
+  
+</ng-template>
+</div>

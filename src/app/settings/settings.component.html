@@ -1,0 +1,15 @@
+<md-sidenav-container class="example-container">
+  <md-sidenav #sidenav mode="side" class="example-sidenav">
+    <div id="mySettings">
+		<span style="font-size:30px;cursor:pointer" (click)="black()">black </span>
+		<span style="font-size:30px;cursor:pointer" (click)="grey()">grey </span>
+		<span style="font-size:30px;cursor:pointer" (click)="white()">white </span>
+	</div>
+  </md-sidenav>
+
+  <div class="example-sidenav-content">
+    <button type="button" md-button (click)="sidenav.open()">
+      <i class="material-icons">&#xE8B8;</i>
+    </button>
+  </div>
+</md-sidenav-container>

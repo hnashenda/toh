@@ -1,0 +1,31 @@
+.demo-dialog-card {
+  max-width: 405px;
+  margin: 20px 0;
+}
+.cappuccino{
+	    color: #EADBC4;
+		background-color: #EADBC4;
+}
+.black{
+	    color: #000;
+		background-color: #000;
+}
+.grey{
+	    color: #ccc;
+		background-color: #ccc;
+}
+.white{
+	    color: #fff;
+		background-color: #fff;
+}
+.orange{
+	    color: #f48024;
+}
+#mySettings{
+    background-color: #a79a78;
+    padding: 10px;
+}
+.mat-dialog-container {
+    background: red !important;
+    color: rgba(0,0,0,.87);
+}

@@ -1,0 +1,195 @@
+h1 {
+  font-size: 1.2em;
+  color: #999;
+  margin-bottom: 0;
+}
+h2 {
+  font-size: 2em;
+  margin-top: 0;
+  padding-top: 0;
+}
+nav a {
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 4px;
+}
+nav a:visited, a:link {
+  color: #607D8B;
+}
+nav a:hover {
+  color: #039be5;
+  background-color: #CFD8DC;
+}
+nav a.active {
+  color: #039be5;
+}
+
+#sidebar .list-group-item {
+    border-radius: 0;
+    background-color: #333;
+    color: #ccc;
+    border-left: 0;
+    border-right: 0;
+    border-color: #2c2c2c;
+    white-space: nowrap;
+}
+
+/* highlight active menu */
+#sidebar .list-group-item:not(.collapsed) {
+    background-color: #222;
+}
+
+/* closed state */
+#sidebar .list-group .list-group-item[aria-expanded="false"]::after {
+  content: " \f0d7";
+  font-family: FontAwesome;
+  display: inline;
+  text-align: right;
+  padding-left: 5px;
+}
+
+/* open state */
+#sidebar .list-group .list-group-item[aria-expanded="true"] {
+  background-color: #222;
+}
+#sidebar .list-group .list-group-item[aria-expanded="true"]::after {
+  content: " \f0da";
+  font-family: FontAwesome;
+  display: inline;
+  text-align: right;
+  padding-left: 5px;
+}
+
+/* level 1*/
+#sidebar .list-group .collapse .list-group-item  {
+  padding-left: 20px;
+}
+
+/* level 2*/
+#sidebar .list-group .collapse > .collapse .list-group-item {
+  padding-left: 30px;
+}
+
+/* level 3*/
+#sidebar .list-group .collapse > .collapse > .collapse .list-group-item {
+  padding-left: 40px;
+}
+
+@media (max-width:48em) {
+    /* overlay sub levels on small screens */
+    #sidebar .list-group .collapse.in, #sidebar .list-group .collapsing {
+        position: absolute;
+        z-index: 1;
+        width: 190px;
+    }
+    #sidebar .list-group > .list-group-item {
+        text-align: center;
+        padding: .75rem .5rem;
+    }
+    /* hide caret icons of top level when collapsed */
+    #sidebar .list-group > .list-group-item[aria-expanded="true"]::after,
+    #sidebar .list-group > .list-group-item[aria-expanded="false"]::after {
+        display:none;
+    }
+}
+
+/* change transition animation to width when entire sidebar is toggled */
+#sidebar.collapse {
+  -webkit-transition-timing-function: ease;
+       -o-transition-timing-function: ease;
+          transition-timing-function: ease;
+  -webkit-transition-duration: .2s;
+       -o-transition-duration: .2s;
+          transition-duration: .2s;
+}
+
+#sidebar.collapsing {
+  opacity: 0.8;
+  width: 0;
+  -webkit-transition-timing-function: ease-in;
+       -o-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+  -webkit-transition-property: width;
+       -o-transition-property: width;
+          transition-property: width;
+
+}
+
+
+#sidebar li, #sidebar.collapse[_ngcontent-c1]{
+	list-style-type:none;
+}
+#sidebar .panel {	
+	background-color:#333;
+}
+#sidebar .user {
+	position: relative;
+    margin-top: 20px;
+    padding-bottom: 20px;	
+}
+#sidebar .user .photo, .bootstrap-navbar .user .photo {
+    width: 34px;
+    height: 34px;
+    overflow: hidden;
+    border-radius: 50%;
+    float: left;
+    margin-right: 11px;
+    margin-left: 23px;
+    z-index: 5;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+#sidebar .list-group-item[aria-expanded="true"] .transparent{
+	background-color:transparent;	
+	border:none;
+}
+#sidebar[_ngcontent-c1] .list-group[_ngcontent-c1] .transparent[aria-expanded="true"][_ngcontent-c1] {
+    background-color:transparent;	
+	border:none;
+}
+#sidebar .transparent{
+	background-color:transparent;	
+	border:none;
+}
+#sidebar .user .photo img, .bootstrap-navbar .user .photo img {
+    width: 100%;
+}
+#sidebar .user a, .bootstrap-navbar .user a {
+    color: #FFFFFF;
+    padding: 8px 14px;
+    display: block;
+    white-space: nowrap;
+}
+.mat-toolbar-row{
+	height:auto;
+}
+.mat-toolbar.mat-primary{  
+    height: auto !important;
+}
+.app-navbar{
+	width:100%;
+}
+
+#main{
+	transition: margin-left .5s;
+    padding: 16px; 
+	margin-left: 250px;	
+}
+@media (max-width:990px){
+	#main{	
+		/*margin-left: 0%;	*/
+	}
+}
+.settings {   	
+    position: fixed;    
+    top: 0;
+    right: 0;   
+    transition: 0.5s;   
+}
+
+
+
+
+

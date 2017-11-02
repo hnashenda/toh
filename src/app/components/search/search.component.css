@@ -1,0 +1,23 @@
+.example-form {
+  /*min-width: 150px;
+  max-width: 500px;
+  width: 100%;*/
+  float:right;
+
+}
+.example-form i{
+	float:right;
+}
+.example-form .mat-input-element{
+	width:50%;
+}
+.example-form .mat-form-field {
+    font-family: Roboto,"Helvetica Neue",sans-serif;
+    font-size: inherit;
+    font-weight: 400;
+    line-height: 1.425; 
+}
+
+.example-full-width {
+  width: 100%;
+}

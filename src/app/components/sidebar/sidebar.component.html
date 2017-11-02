@@ -1,0 +1,222 @@
+<!--div class="logo">
+    <a href="https://www.creative-tim.com" class="simple-text">
+        <div class="logo-img">
+            <img src="/assets/img/angular2-logo-red.png"/>
+        </div>
+        Andromeda
+    </a>
+</div>
+<div class="sidebar-wrapper">
+    <form class="navbar-form navbar-right" role="search" *ngIf="isMobileMenu()">
+        <div class="form-group form-black is-empty">
+            <input type="text" class="form-control" placeholder="Search">
+            <span class="material-input"></span>
+        </div>
+        <button type="submit" class="btn btn-white btn-round btn-just-icon">
+            <i class="material-icons">search</i><div class="ripple-container"></div>
+        </button>
+    </form>
+
+    <ul class="nav nav-mobile-menu" *ngIf="isMobileMenu()">
+        <li>
+            <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="material-icons">dashboard</i>
+                <p class="hidden-lg hidden-md">Dashboard</p>
+            </a>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="material-icons">notifications</i>
+                <span class="notification">5</span>
+                <p class="hidden-lg hidden-md">Notifications</p>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="#">Mike John responded to your email</a></li>
+                <li><a href="#">You have 5 new tasks</a></li>
+                <li><a href="#">You're now friend with Andrew</a></li>
+                <li><a href="#">Another Notification</a></li>
+                <li><a href="#">Another One</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
+               <i class="material-icons">person</i>
+               <p class="hidden-lg hidden-md">Profile</p>
+            </a>
+        </li>
+    </ul>
+ 
+		
+    <div class="nav-container">
+        <ul class="nav">
+            <li routerLinkActive="active" *ngFor="let menuItem of menuItems" class="{{menuItem.class}}">
+                <a  [routerLink]="[menuItem.path]">
+                    <i class="material-icons">{{menuItem.icon}}</i>
+                    <p>{{menuItem.title}}</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+	
+	
+	
+
+</div>
+
+
+<!--div class="col-md-3 col-xs-1 p-l-0 p-r-0 collapse in" id="sidebar">
+            <div class="list-group panel">
+              	
+				<li routerLinkActive="active">		  
+			   
+					<div class="user">
+						<md-divider></md-divider>
+						<div class="photo">
+							<img src="../assets/img/default-avatar.png">							
+						</div>
+						<a data-parent="#sidebar"  href="#menu_profile" class="list-group-item collapsed transparent" data-toggle="collapse"  aria-expanded="false">
+						   
+						   <span class="hidden-sm-down"> hubert Nashenda</span> 
+					    </a>
+						<div class="collapse" id="menu_profile">							
+							<a routerLink="/user-profile" class="list-group-item" data-parent="#menu_profile">My Profile</a>
+							<a routerLink="/user-profile" class="list-group-item" data-parent="#menu_profile">Edit Profile</a>
+							<a routerLink="/user-profile" class="list-group-item" data-parent="#menu_profile">Settings</a>
+						</div>
+						<md-divider></md-divider>
+					</div>	
+					
+			   </li>
+				
+			   <li  *ngFor="let menuItem of menuItems; let i = index;">				  
+			   
+					<div *ngIf="menuItem.children; else non_menu">
+					
+						<a data-parent="#sidebar"  href="#menu{{i}}" class="list-group-item collapsed" data-toggle="collapse"  aria-expanded="false">
+
+						    <i class="material-icons">{{menuItem['data'].menu.icon}}</i>
+						   <span class="hidden-sm-down"> {{menuItem['data'].menu.title}}</span> 
+					    </a>
+						<ul class="collapse" id="menu{{i}}">
+							<!--a *ngFor="let submenuItem of menuItem['children']" [routerLink]="[submenuItem.path]" class="list-group-item" data-parent="#menu">{{submenuItem['data'].menu.title}}</a-->		
+
+							<!--li  *ngFor="let submenuItem of menuItem['children']">		
+							
+								<a routerLinkActive="active" [routerLink]="[submenuItem['data'].menu.path]" class="list-group-item" data-parent="#menu">{{submenuItem['data'].menu.title}}</a>		
+							
+							</li>
+							<!--a href="#" class="list-group-item" data-parent="#menu1">Subitem 2</a>
+							<a href="#" class="list-group-item" data-parent="#menu1">Subitem 3</a-->
+						<!--/ul>
+					
+					</div>
+					
+					<ng-template #non_menu>
+						
+						<a routerLinkActive="active" data-parent="#sidebar"  [routerLink]="[menuItem.path]" class="list-group-item" >
+						   <i class="material-icons">{{menuItem['data'].menu.icon}}</i>
+						   <span class="hidden-sm-down"> {{menuItem['data'].menu.title}}</span> 
+						</a>
+												
+					</ng-template>					
+			   
+			   </li>
+			  
+			  
+            </div>
+        </div-->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+<div id="mySidenav" class="sidenav">
+		
+
+            <div class="scroll-box">
+              	
+				<!--div class="row" *ngIf="isMobileMenu">
+					
+					<a class="navbar-brand icon" style="font-size:30px;cursor:pointer" (click)="mobileCloseSide()">&#9776; </a>	
+				</div-->
+				
+				<li class="user-area" routerLinkActive="active">		  
+			   
+					<div class="user">
+						<md-divider></md-divider>
+						<div class="photo">
+							<img src="../assets/img/default-avatar.png">							
+						</div>
+						<a data-parent="#sidebar"  href="#menu_profile" class="list-group-item collapsed transparent" data-toggle="collapse"  aria-expanded="false">
+						   
+						   <span class="hidden-sm-down"> Admin</span> 
+					    </a>
+						<div class="collapse" id="menu_profile">							
+							<a routerLink="/user-profile" class="list-group-item" data-parent="#menu_profile">My Profile</a>
+							<a routerLink="/user-profile" class="list-group-item" data-parent="#menu_profile">Edit Profile</a>
+							<a routerLink="/user-profile" class="list-group-item" data-parent="#menu_profile">Settings</a>
+						</div>
+						<md-divider></md-divider>
+					</div>	
+					
+			   </li>
+				
+			   <li  class="sidebar-links" *ngFor="let menuItem of menuItems; let i = index;">				  
+			   
+					<div *ngIf="menuItem.children; else non_menu">
+					
+						<a data-parent="#sidebar"  href="#menu{{i}}" class="list-group-item collapsed" data-toggle="collapse"  aria-expanded="false">
+						   <!--i class="fa fa-dashboard"></i-->
+					   
+						    <i class="material-icons">{{menuItem['data'].menu.icon}}</i>
+						   <span class="hidden-sm-down"> {{menuItem['data'].menu.title}}</span> 
+					    </a>
+						<ul class="collapse" id="menu{{i}}">
+							<!--a *ngFor="let submenuItem of menuItem['children']" [routerLink]="[submenuItem.path]" class="list-group-item" data-parent="#menu">{{submenuItem['data'].menu.title}}</a-->		
+							<li  *ngFor="let submenuItem of menuItem['children']">		
+							
+								<a routerLinkActive="active" [routerLink]="[submenuItem['data'].menu.path]" class="list-group-item" data-parent="#menu">{{submenuItem['data'].menu.title}}</a>		
+							
+							</li>
+							<!--a href="#" class="list-group-item" data-parent="#menu1">Subitem 2</a>
+							<a href="#" class="list-group-item" data-parent="#menu1">Subitem 3</a-->
+						</ul>
+					
+					</div>
+					
+					<ng-template #non_menu>
+						
+						<a routerLinkActive="active" data-parent="#sidebar"  [routerLink]="[menuItem.path]" class="list-group-item" >
+						   <i class="material-icons">{{menuItem['data'].menu.icon}}</i>
+						   <span class="hidden-sm-down"> {{menuItem['data'].menu.title}}</span> 
+						</a>
+												
+					</ng-template>					
+			   
+			   </li>
+			  
+			  
+            </div>
+		
+		<div class="cover-bar"></div>
+		
+		 
+			
+        </div>
+		
+		
+
+
+		
+		
+
