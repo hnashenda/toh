@@ -24,7 +24,10 @@ import {
 
 
 
-import {ContentElementDialog, IFrameDialog, JazzDialog} from './dialog/dialog-demo.component';
+import {DialogDemo} from './dialog/dialog-demo.component';
+import {ContentElementDialog} from './dialog/dialog-demo.component';
+import {IFrameDialog} from './dialog/dialog-demo.component';
+import {JazzDialog} from './dialog/dialog-demo.component';
 
 import { BootstrapGridModule } from 'ng2-bootstrap-grid';
 
@@ -46,7 +49,7 @@ import { CheckboxComponent } from './checkbox/checkbox.component';
 import { CardDemo} from './card/card-demo.component';
 import { DatepickerDemo} from './datepicker/datepicker.component';
 //import { CalenderComponent} from './calender/calender.component';
-import { DialogDemo} from './dialog/dialog-demo.component';
+//import { DialogDemo,JazzDialog,ContentElementDialog,IFrameDialog} from './dialog/dialog-demo.component';
 import { GridListDemo } from './grid-list/grid-list.component';
 import { FormsComponent } from './forms/forms.component';
 
@@ -57,7 +60,10 @@ import { SliderComponent } from './slider/slider.component';
 
 import { SettingsComponent } from './settings/settings.component';
 
-import { TabsComponent } from './tabs/tabs.component';
+import { TabsComponent} from './tabs/tabs.component';
+import { SunnyTabContent } from './tabs/tabs.component';
+import { RainyTabContent} from './tabs/tabs.component';
+import { FoggyTabContent } from './tabs/tabs.component';
 import { TooltipDemo } from './tooltip/tooltip.component';
 import { TableListComponent } from './table-list/table-list.component';
 import { TypographyComponent } from './typography/typography.component';
@@ -124,6 +130,9 @@ import { AppRoutingModule }     from './app-routing.module';
 	IFrameDialog,
 	MySettingsComponent,	
 	TabsComponent,
+	SunnyTabContent,
+	RainyTabContent,
+	FoggyTabContent,
 	TooltipDemo,
 	RadioComponent,
 	SliderComponent,
